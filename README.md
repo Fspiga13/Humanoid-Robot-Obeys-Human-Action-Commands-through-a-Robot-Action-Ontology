@@ -62,8 +62,11 @@ To **stop** the application it is possible to give commands such as *stop* or *q
 **<<< MANCA USO RELATIVO A HDFS >>>**
 
 ## Repository contents
+### ZoraNlpReasoner
+This folder contains the main program, including the TextToRDF tool. To use the application it is necessary to add Stanford coreNLP inside the TextToRDF folder. This section of the application contains the NLP Engine we have developed.
+
 ### ZoraActions.crg
-This file contains the Choregraphe software for the Zora robot.
+This file contains the Choregraphe software for the Zora robot. This  section of the application deals  with  the  management  of  the  robot  and  the  interaction with the NLP Engine from the robot. 
 
 ### IncompatibilityTable
 The table shows for each action in the ontology the actions that cannot precede it and therefore are incompatible. Actions that have no incompatibility can always be performed.
