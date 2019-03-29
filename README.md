@@ -14,23 +14,46 @@ pip install stanfordcorenlp
 ```
 ### Installing
 Download [Stanford coreNLP](https://stanfordnlp.github.io/CoreNLP/) and move Stanford main folder into the TextToRDF folder.
+
+#### Step #1
 To start Stanford coreNLP locally and listening on port 9000 run the following command after moving to the main Stanford folder:
 (Remember that using Stanford locally requires about 4GB of RAM space)
 ```
 cd /ZoraNlpReasoner/TextToRDF/stanford-corenlp-full-2018-10-05/
 java --add-modules java.se.ee -mx4g -cp "*" edu.stanford.nlp.pipeline.StanfordCoreNLPServer -port 9000 -timeout 15000
 ```
-After running Stanford, you can test the operation of the RDF creation tool from the Stanford output. Run the following command after moving to the src folder, TextToRDF subfolder:
+After running Stanford, you can test the operation of the RDF creation tool from the Stanford output. 
+
+#### Step #2
+Run the following command after moving to the src folder, TextToRDF subfolder:
 ```
 cd /ZoraNlpReasoner/TextToRDF/src/
 python xproject.py -t "<sentence>"
 ```
+#### Step #3
+Passed the previous step, you can proceed and run the ZoraNlpReasoner main program to test that it communicates correctly with the TextToRDF tool. Through the use of the program it is possible to test the behavior of the robot based on the phrases chosen as if they were given as input to the robot itself.
 
+Once this phase is over, you can test the **complete application**, also using the Choregraphe software by importing the project from the ZoraActions.crg file. 
+The Reasoner NLP box, located in the Choregraphe project, allows you to specify an URL, is set with the address 
+```
+http://localhost:5003
+```
+this setting is correct when you want to use the **simulated robot**. 
+To make the robot software and the Reasoner communicate, it is necessary to **uncomment** the following line of code present in the Main class of the ZoraNlpReasoner main program:
+```
+httpManager.postManager(analyzer);
+```
+#### Step #4
+By starting the main program and the Choregraphe software it is possible to use the **console**, present in Choregraphe, to give the input sentences to the robot and see its behavior in the **simulated robot**.
 
+To use the application with the **real robot** it is necessary to connect both the Zora robot and the computer to an external hotspot. You need to install [ngrok](https://ngrok.com/download) and start with the command (from the directory where it is installed):
+```
+./ngrok http 5003
+```
+to generate the new URL to replace *localhost:5003* in the Reasoner NLP box. Ngrok should be started **every time** a new connection is made as the generated URL is disposable, with a limited duration.
 
-
-
-## Running tests
+#### Step #5
+Connect the Zora robot and the computer to an external hotspot. Start ngrok and replace the old URL, in the Reasoner NLP box, with the one provided by ngrok. Run the main ZoraNlpReasoner program and the Choregraphe software. It is possible to communicate with the **real robot** via voice commands or through the Choregraphe console.
 
 
 ## Repository contents
