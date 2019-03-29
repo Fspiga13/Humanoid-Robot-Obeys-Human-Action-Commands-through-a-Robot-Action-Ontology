@@ -59,6 +59,8 @@ To **start** the application connect the Zora robot and the computer to an exter
 
 To **stop** the application it is possible to give commands such as *stop* or *quit*. Then, the executions of ZoraNlpReasoner, ngrok and Stanford coreNLP must be stopped.
 
+**<<< MANCA USO RELATIVO A HDFS >>>**
+
 ## Repository contents
 ### IncompatibilityTable
 The table shows for each action in the ontology the actions that cannot precede it and therefore are incompatible. Actions that have no incompatibility can always be performed.
