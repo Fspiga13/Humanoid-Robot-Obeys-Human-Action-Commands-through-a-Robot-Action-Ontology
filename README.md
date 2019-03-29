@@ -62,6 +62,9 @@ To **stop** the application it is possible to give commands such as *stop* or *q
 **<<< MANCA USO RELATIVO A HDFS >>>**
 
 ## Repository contents
+### ZoraActions.crg
+This file contains the Choregraphe software for the Zora robot.
+
 ### IncompatibilityTable
 The table shows for each action in the ontology the actions that cannot precede it and therefore are incompatible. Actions that have no incompatibility can always be performed.
 
