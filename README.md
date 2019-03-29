@@ -40,7 +40,8 @@ The *Reasoner NLP box*, located in the Choregraphe project, allows you to specif
 http://localhost:5003
 ```
 this setting is correct when you want to use the **simulated robot**. 
-To make the robot software and the Reasoner communicate, it is necessary to **uncomment** the following line of code present in the Main class of the ZoraNlpReasoner main program:
+
+To interface the Choregraphe software with the ZoraNlpReasoner, it is necessary to **uncomment** the following line of code present in the Main class of the ZoraNlpReasoner main program:
 ```
 httpManager.postManager(analyzer);
 ```
