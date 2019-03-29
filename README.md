@@ -54,7 +54,7 @@ To use the application with the **real robot** it is necessary to connect both t
 ```
 to generate the new URL to replace *localhost:5003* in the *Reasoner NLP box*. Ngrok should be started **every time** a new connection is made as the generated URL is disposable, with a limited duration.
 
-#### Using whole application
+### Using whole application
 To **start** the application connect the Zora robot and the computer to an external hotspot. Then, start Stanford listening on *port 9000*, start ngrok on *port 5003* and replace the old URL, in the *Reasoner NLP box*, with the one provided by ngrok. Run the ZoraNlpReasoner main program and the Choregraphe software. It is possible to communicate with the **real robot** via voice commands or through the Choregraphe console.
 
 To **stop** the application it is possible to give commands such as *stop* or *quit*. Then, the executions of ZoraNlpReasoner, ngrok and Stanford coreNLP must be stopped.
