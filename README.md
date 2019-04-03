@@ -3,7 +3,7 @@ This software engine allows the Zora humanoid robot to execute natural language 
 
 ## Getting started
 ### Prerequisites
-Before to use the application, you need to install [Java](https://www.oracle.com/technetwork/java/javase/downloads/index.html) and [Python version 2.7](https://www.python.org/downloads/release/python-2710/). If you have any trouble in the following steps using Python in Choregraphe use [this](http://doc.aldebaran.com/2-1/dev/python/install_guide.html).
+Before to use the application, you need to install [Java](https://www.oracle.com/technetwork/java/javase/downloads/index.html) and [Python version 2.7](https://www.python.org/downloads/release/python-2710/). If you have troubles in the following steps using Python in Choregraphe use [this](http://doc.aldebaran.com/2-1/dev/python/install_guide.html).
 You need to also download the following packages:
 ```
 pip install requests
@@ -61,7 +61,7 @@ to generate the new URL to replace *localhost:5003* in the *Reasoner NLP box*. N
 ### Using whole application
 To **start** the application connect the Zora robot and the computer to an external hotspot. Then, start Stanford listening on *port 9000*, start ngrok on *port 5003* and replace the old URL, in the *Reasoner NLP box*, with the one provided by ngrok. Run the ZoraNlpReasoner main project with *IntelliJ IDEA* and the ZoraActions software with *Choregraphe*. It is possible to communicate with the **real robot** via voice commands or through the Choregraphe console.
 
-To **stop** the application it is possible to give commands such as *stop* or *quit*. Then, the executions of ZoraNlpReasoner, ngrok and Stanford coreNLP must be stopped.
+To **stop** the application it is possible to give commands such as *stop* or *quit*. Then, the executions of ZoraNlpReasoner, ngrok and Stanford coreNLP must be manually stopped.
 
 ## Repository contents
 ### ZoraNlpReasoner
