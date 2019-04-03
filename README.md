@@ -14,7 +14,7 @@ pip install nltk
 pip install graphviz
 pip install stanfordcorenlp
 ```
-Download and install [IntelliJ IDEA](https://www.jetbrains.com/idea/download/).
+Download and install [IntelliJ IDEA](https://www.jetbrains.com/idea/download/) and Choregraphe.
 
 ### Installing
 Download [Stanford coreNLP](https://stanfordnlp.github.io/CoreNLP/) and move Stanford main folder into the TextToRDF folder.
@@ -35,9 +35,9 @@ cd /ZoraNlpReasoner/TextToRDF/src/
 python xproject.py -t "<sentence>"
 ```
 #### Step #3
-Passed the previous step, you can run the ZoraNlpReasoner main project with *IntelliJ IDEA* to test that it communicates correctly with the TextToRDF tool. Through the use of the project it is possible to test the behavior of the robot based on the sentences chosen as if they were given as input to the robot itself.
+Passed the previous step, you can run the ZoraNlpReasoner main project with *IntelliJ IDEA* to test that it communicates correctly with the TextToRDF tool. Through the use of the project it is possible to test the behavior of the robot based on the sentences chosen as if they were given as input to the robot itself. Shows all the features without the need for *Choregrephe*.
 
-### Step #4
+#### Step #4
 Once this phase is over, you can test the **complete application**, also using the Choregraphe software by importing the project from the ZoraActions.crg file. 
 The *Reasoner NLP box*, located in the *Choregraphe* project, allows you to specify an URL, is set with the address: 
 ```
