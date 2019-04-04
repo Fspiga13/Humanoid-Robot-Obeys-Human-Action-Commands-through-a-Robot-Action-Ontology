@@ -50,10 +50,9 @@ The *Reasoner NLP box*, located in the *Choregraphe* project, allows you to spec
 http://localhost:5003
 ```
 this setting is correct when you want to use the **simulated robot**. 
-
-To interface the *Choregraphe* software with the ZoraNlpReasoner, it is necessary to **uncomment** the following line of code present in the Main class of the ZoraNlpReasoner main project:
+To use the Reasoner with Choregraphe, run the ZoraNlpReasoner.jar with the command:
 ```
-httpManager.postManager(analyzer);
+java -jar ZoraNlpReasoner.jar use zora
 ```
 #### Step #5
 By starting the main project and the *Choregraphe* software it is possible to use the **console**, present in *Choregraphe*, to give the input sentences to the robot and see its behavior in the **simulated robot**.
