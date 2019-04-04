@@ -74,7 +74,7 @@ To **stop** the application it is possible to give commands such as *stop* or *q
 
 ## Repository contents
 ### ZoraNlpReasoner
-This folder contains the main project (ZoraNlpReasoner.jar), including the TextToRDF tool. To use the application it is necessary to add Stanford coreNLP inside the TextToRDF folder. This section of the application contains the NLP Engine we have developed.
+This folder contains the main project (ZoraNlpReasoner.jar), including the **TextToRDF tool** and the **Ontologies**. To use the application it is necessary to add Stanford coreNLP inside the TextToRDF folder. This section of the application contains the NLP Engine we have developed.
 
 ### ZoraActions.crg
 This file contains the *Choregraphe* software for the Zora robot. This section of the application deals with the management  of the robot and the interaction with the NLP Engine from the robot. 
