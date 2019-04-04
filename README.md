@@ -15,6 +15,7 @@ pip install graphviz
 pip install stanfordcorenlp
 ```
 Download [Stanford coreNLP](https://stanfordnlp.github.io/CoreNLP/) and move Stanford main folder into the TextToRDF folder.
+
 Download and install Choregraphe. If you have troubles in the following steps using Python in Choregraphe use [this](http://doc.aldebaran.com/2-1/dev/python/install_guide.html).
 
 ### Installing
