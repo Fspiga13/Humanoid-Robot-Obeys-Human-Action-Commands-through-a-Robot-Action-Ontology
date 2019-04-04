@@ -14,10 +14,10 @@ pip install nltk
 pip install graphviz
 pip install stanfordcorenlp
 ```
+Download [Stanford coreNLP](https://stanfordnlp.github.io/CoreNLP/) and move Stanford main folder into the TextToRDF folder.
 Download and install Choregraphe. If you have troubles in the following steps using Python in Choregraphe use [this](http://doc.aldebaran.com/2-1/dev/python/install_guide.html).
 
 ### Installing
-Download [Stanford coreNLP](https://stanfordnlp.github.io/CoreNLP/) and move Stanford main folder into the TextToRDF folder.
 
 #### Step #1
 To start Stanford coreNLP locally and listening on port 9000 run the following command after moving to the main Stanford folder:
