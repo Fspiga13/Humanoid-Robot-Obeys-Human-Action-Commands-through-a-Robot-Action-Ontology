@@ -3,7 +3,7 @@ This software engine allows the Zora humanoid robot to execute natural language 
 
 ## Getting started
 ### Prerequisites
-Before to use the application, you need to install [Java](https://www.oracle.com/technetwork/java/javase/downloads/index.html) and [Python version 2.7](https://www.python.org/downloads/release/python-2710/). If you have troubles in the following steps using Python in Choregraphe use [this](http://doc.aldebaran.com/2-1/dev/python/install_guide.html).
+Before to use the application, you need to install [Java](https://www.oracle.com/technetwork/java/javase/downloads/index.html) and [Python version 2.7](https://www.python.org/downloads/release/python-2710/).
 You need to also download the following packages:
 ```
 pip install requests
@@ -14,10 +14,11 @@ pip install nltk
 pip install graphviz
 pip install stanfordcorenlp
 ```
-Download and install [IntelliJ IDEA](https://www.jetbrains.com/idea/download/) and Choregraphe.
+Download [Stanford coreNLP](https://stanfordnlp.github.io/CoreNLP/) and move Stanford main folder into the TextToRDF folder.
+
+Download and install Choregraphe. If you have troubles in the following steps using Python in Choregraphe use [this](http://doc.aldebaran.com/2-1/dev/python/install_guide.html).
 
 ### Installing
-Download [Stanford coreNLP](https://stanfordnlp.github.io/CoreNLP/) and move Stanford main folder into the TextToRDF folder.
 
 #### Step #1
 To start Stanford coreNLP locally and listening on port 9000 run the following command after moving to the main Stanford folder:
@@ -35,7 +36,12 @@ cd /ZoraNlpReasoner/TextToRDF/src/
 python xproject.py -t "<sentence>"
 ```
 #### Step #3
-Passed the previous step, you can run the ZoraNlpReasoner main project with *IntelliJ IDEA* to test that it communicates correctly with the TextToRDF tool. Through the use of the project it is possible to test the behavior of the robot based on the sentences chosen as if they were given as input to the robot itself. Shows all the features without the need for *Choregrephe*.
+Passed the previous step, you can run the ZoraNlpReasoner main project, after moving to the ZoraNlpReasoner folder, with the command:
+```
+cd /ZoraNlpReasoner/
+java -jar ZoraNlpReasoner.jar
+```
+to test that it communicates correctly with the TextToRDF tool. Through the use of the project it is possible to test the behavior of the robot based on the sentences chosen as if they were given as input to the robot itself. Shows all the features without the need for *Choregrephe*.
 
 #### Step #4
 Once this phase is over, you can test the **complete application**, also using the Choregraphe software by importing the project from the ZoraActions.crg file. 
@@ -44,10 +50,9 @@ The *Reasoner NLP box*, located in the *Choregraphe* project, allows you to spec
 http://localhost:5003
 ```
 this setting is correct when you want to use the **simulated robot**. 
-
-To interface the *Choregraphe* software with the ZoraNlpReasoner, it is necessary to **uncomment** the following line of code present in the Main class of the ZoraNlpReasoner main project:
+To use the Reasoner with Choregraphe, run the ZoraNlpReasoner.jar with the command:
 ```
-httpManager.postManager(analyzer);
+java -jar ZoraNlpReasoner.jar use zora
 ```
 #### Step #5
 By starting the main project and the *Choregraphe* software it is possible to use the **console**, present in *Choregraphe*, to give the input sentences to the robot and see its behavior in the **simulated robot**.
@@ -59,13 +64,17 @@ To use the application with the **real robot** it is necessary to connect both t
 to generate the new URL to replace *localhost:5003* in the *Reasoner NLP box*. Ngrok should be started **every time** a new connection is made as the generated URL is disposable, with a limited duration.
 
 ### Using whole application
-To **start** the application connect the Zora robot and the computer to an external hotspot. Then, start Stanford listening on *port 9000*, start ngrok on *port 5003* and replace the old URL, in the *Reasoner NLP box*, with the one provided by ngrok. Run the ZoraNlpReasoner main project with *IntelliJ IDEA* and the ZoraActions software with *Choregraphe*. It is possible to communicate with the **real robot** via voice commands or through the Choregraphe console.
+To **start** the application connect the Zora robot and the computer to an external hotspot. Then, start Stanford listening on *port 9000*, start ngrok on *port 5003* and replace the old URL, in the *Reasoner NLP box*, with the one provided by ngrok. Run the ZoraNlpReasoner main project with the command:
+```
+java -jar ZoraNlpReasoner.jar use zora
+```
+and the ZoraActions software with *Choregraphe*. It is possible to communicate with the **real robot** via voice commands or through the Choregraphe console.
 
 To **stop** the application it is possible to give commands such as *stop* or *quit*. Then, the executions of ZoraNlpReasoner, ngrok and Stanford coreNLP must be manually stopped.
 
 ## Repository contents
 ### ZoraNlpReasoner
-This folder contains the main project, including the TextToRDF tool. To use the application it is necessary to add Stanford coreNLP inside the TextToRDF folder and to run it with *IntelliJ IDEA*. This section of the application contains the NLP Engine we have developed.
+This folder contains the main project (ZoraNlpReasoner.jar), including the **TextToRDF tool** and the **Ontologies**. To use the application it is necessary to add Stanford coreNLP inside the TextToRDF folder. This section of the application contains the NLP Engine we have developed.
 
 ### ZoraActions.crg
 This file contains the *Choregraphe* software for the Zora robot. This section of the application deals with the management  of the robot and the interaction with the NLP Engine from the robot. 
