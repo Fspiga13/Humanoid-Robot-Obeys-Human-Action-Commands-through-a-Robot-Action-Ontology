@@ -41,7 +41,7 @@ Passed the previous step, you can run the ZoraNlpReasoner main project, after mo
 cd /ZoraNlpReasoner/
 java -jar ZoraNlpReasoner.jar
 ```
-to test that it communicates correctly with the TextToRDF tool. Through the use of the project it is possible to test the behavior of the robot based on the sentences chosen as if they were given as input to the robot itself. Shows all the features without the need for *Choregrephe*.
+to test that it communicates correctly with the TextToRDF tool. Through the use of the project it is possible to test the behavior of the robot based on the sentences chosen as if they were given as input to the robot itself. Shows all the features without the need for *Choregraphe*.
 
 #### Step #4
 Once this phase is over, you can test the **complete application**, also using the Choregraphe software by importing the project from the ZoraActions.crg file. 
