@@ -3,6 +3,8 @@ This software engine allows the Zora humanoid robot to execute natural language 
 
 ## Getting started
 ### Prerequisites
+First of all, you need to download or clone the repository. The necessary files to run whole application are the ZoraNlpReasoner folder and the ZoraActions.crg project.
+
 Before to use the application, you need to install [Java](https://www.oracle.com/technetwork/java/javase/downloads/index.html) and [Python version 2.7](https://www.python.org/downloads/release/python-2710/).
 You need to also download the following packages:
 ```
@@ -27,21 +29,25 @@ To start Stanford coreNLP locally and listening on port 9000 run the following c
 cd /ZoraNlpReasoner/TextToRDF/stanford-corenlp-full-2018-10-05/
 java --add-modules java.se.ee -mx4g -cp "*" edu.stanford.nlp.pipeline.StanfordCoreNLPServer -port 9000 -timeout 15000
 ```
-After running Stanford, you can test the operation of the RDF creation tool from the Stanford output. 
 
 #### Step #2
+After running Stanford, you can test the operation of the RDF creation tool from the Stanford output. 
 Run the following command after moving to the src folder, TextToRDF subfolder:
 ```
 cd /ZoraNlpReasoner/TextToRDF/src/
 python xproject.py -t "<sentence>"
 ```
+An example of an input sentence is: Zora, raise your right arm. This Step aims to verify that our tool TextToRDF returns the RDF of the input sentence.
+
 #### Step #3
 Passed the previous step, you can run the ZoraNlpReasoner main project, after moving to the ZoraNlpReasoner folder, with the command:
 ```
 cd /ZoraNlpReasoner/
 java -jar ZoraNlpReasoner.jar
 ```
-to test that it communicates correctly with the TextToRDF tool. Through the use of the project it is possible to test the behavior of the robot based on the sentences chosen as if they were given as input to the robot itself. Shows all the features without the need for *Choregraphe*.
+to test that it communicates correctly with the TextToRDF tool. When the prject runs, shows the instruction for use and waits for an input command for the robot (*e.g. Zora, raise your right arm*).
+
+Through the use of the project it is possible to test the behavior of the robot based on the sentences chosen as if they were given as input to the robot itself. Shows all the features without the need for *Choregraphe*.
 
 #### Step #4
 Once this phase is over, you can test the **complete application**, also using the Choregraphe software by importing the project from the ZoraActions.crg file. 
@@ -50,7 +56,7 @@ The *Reasoner NLP box*, located in the *Choregraphe* project, allows you to spec
 http://localhost:5003
 ```
 this setting is correct when you want to use the **simulated robot**. 
-To use the Reasoner with Choregraphe, run the ZoraNlpReasoner.jar with the command:
+To use the Reasoner with *Choregraphe*, run the ZoraNlpReasoner.jar with the command:
 ```
 java -jar ZoraNlpReasoner.jar use zora
 ```
